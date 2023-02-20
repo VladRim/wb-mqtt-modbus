@@ -1,0 +1,45 @@
+{
+    "title": "two-channel meter owen",
+    "device_type": "two-channel meter owen",
+    "group": "g-io",
+    "device": {                     
+        "name": "two-channel meter owen",
+        "id": "TRM200",
+        "response_timeout_ms": 100,
+        "guard_interval_us": 10000,
+        "channels":[ 
+            {
+                "address" : "1",
+                "format" : "s16",
+		        "offset" : 0,
+                "name" : "Temperature PV1",
+                "readonly" : true,
+                "reg_type" : "holding",
+		        "scale" : 0.1,
+                "type" : "value",
+                "units" : "deg C"
+            },
+            {
+                "address" : "2",
+                "format" : "s16",
+		        "offset" : 0,
+                "name" : "Temperature PV2",
+                "readonly" : true,
+                "reg_type" : "holding",
+		        "scale" : 0.1,
+                "type" : "value",
+                "units" : "deg C"
+            }
+        ],
+        "translations": {
+            "en": {
+                "two-channel meter owen": "TRM200 (two-channel meter)"
+            },
+            "ru" : {                
+                "two-channel meter owen": "ТРМ200 (двухканальный измеритель)",
+                "Temperature PV1": "Температура вход 1",
+                "Temperature PV2": "Температура вход 2"
+            } 
+        } 
+    }
+}

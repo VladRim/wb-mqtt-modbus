@@ -1,0 +1,94 @@
+{
+    "title": "general_climate_title",
+    "device_type": "Ceneral Climate",
+    "group": "g-air-conditioning",
+    "device": {                     
+        "name": "Ceneral Climate",
+        "id": "gc-r09hr",
+        "response_timeout_ms": 100,
+        "guard_interval_us": 10000,
+        "channels":[ 
+            {
+                "name" : "Indoor Unit Status",
+                "address": "0",
+                "reg_type" : "holding",
+                "type": "switch"
+            },
+            {
+                "name" : "Temperature Setpoint",
+                "address" : "2",
+                "reg_type" : "holding",
+                "units" : "deg C",
+                "type" : "value",
+                "format" : "s16"
+            },
+            {
+                "address" : "4",
+                "format" : "s16",
+                "name" : "Indoor Temperature",
+                "readonly" : true,
+                "reg_type" : "holding",
+                "type" : "value",
+                "units" : "deg C"
+            },
+            {
+                "address" : "1",
+                "format" : "s16",
+                "max" : "5",
+                "name" : "Air Conditioner Mode",
+                "reg_type" : "holding",
+                "type" : "range"
+            },
+            {
+                "address" : "3",
+                "format" : "s16",
+                "max" : "5",
+                "name" : "Fan Speed",
+                "reg_type" : "holding",
+                "type" : "range"
+            },
+            {
+                "address" : "7",
+                "format" : "s16",
+                "name" : "Alarm Code",
+                "readonly" : true,
+                "reg_type" : "holding",
+                "type" : "value"
+            },
+            {
+                "address" : "8",
+                "format" : "s16",
+                "name" : "Indoor Unit Blocking Mode",
+                "readonly" : true,
+                "reg_type" : "holding",
+                "type" : "value"
+            },
+            {
+                "address" : "5",
+                "format" : "s16",
+                "name" : "heat exchanger temperature",
+                "readonly" : true,
+                "reg_type" : "holding",
+                "type" : "value",
+                "units" : "deg C"
+            }
+        ],
+        "translations": {
+            "en": {
+                "general_climate_title": "CG-MODR-1 (air conditioner adapter)"
+            },
+            "ru" : {                
+                "general_climate_title": "CG-MODR-1 (адаптер кондиционера)",
+                "Indoor Unit Status": "Статус внутреннего блока",
+                "Air Conditioner Mode": "Режим работы кондиционера",
+                "Indoor Unit Blocking Mode": "Режим блокировки внутреннего блока",
+                "Indoor Temperature": "Температура в помещении",
+                "Temperature Setpoint": "Уставка температуры",
+                "Fan Speed": "Скорость вентилятора",
+                "Alarm Code": "Код ошибки",
+                "heat exchanger temperature": "Температура теплообменника",
+                "Start counter": "Количество запусков кондиционера"
+            } 
+        } 
+    }
+}
